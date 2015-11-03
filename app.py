@@ -7,6 +7,9 @@ app = Flask(__name__)
 @app.route("/pi", methods=['POST'])
 def home():
 
+    # default msg case
+    message = "I don't understand."
+
     if 'temp' in request.form['Body'].lower(): 
         message = get_temp()
     
